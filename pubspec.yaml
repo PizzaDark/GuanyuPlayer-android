@@ -1,0 +1,54 @@
+name: guanyu_player
+description: "GuanyuPlayer (关羽之歌便携版) - A voice-activated music player."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Theming
+  cupertino_icons: ^1.0.8
+  google_fonts: ^4.0.4
+
+  # State Management
+  provider: ^6.1.2
+
+  # Audio Playback
+  just_audio: ^0.9.39
+  just_audio_background: ^0.0.1-beta.11
+
+  # Permissions & File System
+  permission_handler: ^11.3.1
+  file_picker: ^8.0.5
+  url_launcher: ^6.2.5
+  
+  # Voice Recognition
+  sherpa_onnx: ^1.10.31
+  record: ^6.0.0
+  
+  # Data Persistence
+  shared_preferences: ^2.5.4
+  path_provider: ^2.1.5
+  path: ^1.9.1
+  audio_session: ^0.1.25
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/audio/
+    # - assets/images/
+    # Sherpa-ONNX 模型文件（需要下载后放入以下目录）
+    - assets/models/sherpa-onnx-streaming-zipformer-zh-14M-2023-02-23/
+
